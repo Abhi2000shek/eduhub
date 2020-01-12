@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <div *ngFor="let k of allvideo" class="col-lg-4">
+        <div class="card mt-5">
+          <div class="card-header">
+            <iframe [src]='k.Path|safepipe'>
+            Header
+            </iframe>
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">{{k.Title}}</h4>
+            <p class="card-text">{{k.Des}}</p>
+          </div>
+          <div class="card-footer text-muted">
+            Footer
+          </div>
+        </div>
+    </div>
+  </div>
+</div>  

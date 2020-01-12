@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="col-lg-6 m-auto">
+    <div class="card border-success mt-5">
+      <div class="card-header bg-success text-white">
+        <h6>Add Course</h6>
+      </div>
+      <div class="card-body">
+          <div *ngIf="isAdded" class="alert alert-success alert-dismissible fade show" role="alert">
+              <strong><i class="fa fa-bell"></i>&nbsp;Success!</strong> Course added Successfully
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+        <form #cd="ngForm">
+          <div class="form-group">
+            <label>Course Title</label>
+            <input class="form-control" type="text" ngModel name="Title" placeholder="Course">
+          </div>
+          <div class="form-group">
+            <label>Video URL</label>
+            <input class="form-control" type="url" ngModel name="Path" placeholder="URL">
+          </div>
+          <div class="form-group">
+            <label>Content</label>
+            <textarea class="form-control" rows="5" cols="5" placeholder="Content Here" ngModel name="Des"></textarea>
+          </div>
+          <div class="text-center">
+            <input type="reset" value="Add Course" class="btn btn-primary" (click)="AddCourse(cd)">
+             
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
